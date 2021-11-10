@@ -19,6 +19,5 @@ public class TipoLogico {
 		else {
 			System.out.println("Não. Ele(a) não está habilitado a tirar carteira");
 		}
-
 	}
 }

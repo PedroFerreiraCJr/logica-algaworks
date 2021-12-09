@@ -1,4 +1,4 @@
-package br.com.algaworks.curso_logica._5_estruturas_de_decisao;
+package br.com.algaworks.curso_logica._05_estruturas_de_decisao;
 
 public class EstruturaIf {
 	public static void main(String[] args) {

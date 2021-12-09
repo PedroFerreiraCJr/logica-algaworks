@@ -1,4 +1,4 @@
-package br.com.algaworks.curso_logica._4_operadores;
+package br.com.algaworks.curso_logica._04_operadores;
 
 import java.util.Scanner;
 

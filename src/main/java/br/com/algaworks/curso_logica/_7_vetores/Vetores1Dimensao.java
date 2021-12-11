@@ -1,7 +1,5 @@
 package br.com.algaworks.curso_logica._7_vetores;
 
-import java.util.Scanner;
-
 public class Vetores1Dimensao {
 	public static void main(String[] args) {
 //		String[] cardapio = new String[] { "Calabresa", "Atum", "Queijo", "Presunto" };

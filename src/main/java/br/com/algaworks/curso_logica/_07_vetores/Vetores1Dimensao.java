@@ -1,4 +1,4 @@
-package br.com.algaworks.curso_logica._7_vetores;
+package br.com.algaworks.curso_logica._07_vetores;
 
 public class Vetores1Dimensao {
 	public static void main(String[] args) {

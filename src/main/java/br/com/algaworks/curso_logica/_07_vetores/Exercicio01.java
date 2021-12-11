@@ -1,4 +1,4 @@
-package br.com.algaworks.curso_logica._7_vetores;
+package br.com.algaworks.curso_logica._07_vetores;
 
 import java.util.Scanner;
 

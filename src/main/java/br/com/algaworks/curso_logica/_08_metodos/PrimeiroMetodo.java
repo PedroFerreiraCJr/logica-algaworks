@@ -14,8 +14,7 @@ public class PrimeiroMetodo {
 			System.out.printf("[%d] %s%n", i, cursos[i]);
 		}
 
-		System.out.print("Qual é o curso que você deseja?: ");
-		Integer posicaoCursoEscolhido = scanner.nextInt();
+		Integer posicaoCursoEscolhido = prompt(scanner, "Qual é o curso que você deseja?: ");
 
 		Boolean posicaoCursoValida = posicaoCursoEscolhido >= 0 && posicaoCursoEscolhido < cursos.length;
 		if (!posicaoCursoValida) {
@@ -31,8 +30,7 @@ public class PrimeiroMetodo {
 			System.out.printf("[%d] %s%n", i, formasPagamento[i]);
 		}
 		
-		System.out.print("Qual a forma de pagamento que você deseja?: ");
-		Integer posicaoFormaPagamentoEscolhida = scanner.nextInt();
+		Integer posicaoFormaPagamentoEscolhida = prompt(scanner, "Qual a forma de pagamento que você deseja?: ");
 
 		Boolean posicaoFormaPagamentoValida = posicaoFormaPagamentoEscolhida >= 0 && posicaoFormaPagamentoEscolhida < formasPagamento.length;
 		if (!posicaoFormaPagamentoValida) {
@@ -50,5 +48,10 @@ public class PrimeiroMetodo {
 	
 	static void imprimirTraco() {
 		System.out.println("---------------------------------------------------");
+	}
+	
+	static int prompt(Scanner scanner, String mensagem) {
+		System.out.print(mensagem);
+		return scanner.nextInt();
 	}
 }

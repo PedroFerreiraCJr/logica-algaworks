@@ -14,7 +14,7 @@ public class RecebendoParametros {
 
 		Integer posicaoCursoEscolhido = prompt(scanner, "Qual é o curso que você deseja?: ");
 
-		Boolean posicaoCursoValida = posicaoCursoEscolhido >= 0 && posicaoCursoEscolhido < cursos.length;
+		Boolean posicaoCursoValida = posicaoInformadaEhValida(posicaoCursoEscolhido, cursos);
 		if (!posicaoCursoValida) {
 			encerrarProgramaPorCausaDaPosicaoInvalida();
 		}
@@ -27,8 +27,7 @@ public class RecebendoParametros {
 
 		Integer posicaoFormaPagamentoEscolhida = prompt(scanner, "Qual a forma de pagamento que você deseja?: ");
 
-		Boolean posicaoFormaPagamentoValida = posicaoFormaPagamentoEscolhida >= 0
-				&& posicaoFormaPagamentoEscolhida < formasPagamento.length;
+		Boolean posicaoFormaPagamentoValida = posicaoInformadaEhValida(posicaoFormaPagamentoEscolhida, formasPagamento);
 		if (!posicaoFormaPagamentoValida) {
 			encerrarProgramaPorCausaDaPosicaoInvalida();
 		}
@@ -42,23 +41,27 @@ public class RecebendoParametros {
 		scanner.close();
 	}
 
+	static void imprimirTraco() {
+		System.out.println("---------------------------------------------------");
+	}
+
+	static int prompt(Scanner scanner, String mensagem) {
+		System.out.print(mensagem);
+		return scanner.nextInt();
+	}
+
+	static void encerrarProgramaPorCausaDaPosicaoInvalida() {
+		System.err.println("Posição inválida!");
+		System.exit(1);
+	}
+
 	static void iterarEExibirPosicoesDoVetorString(String[] array) {
 		for (int i = 0; i < array.length; i++) {
 			System.out.printf("[%d] %s%n", i, array[i]);
 		}
 	}
 
-	static void imprimirTraco() {
-		System.out.println("---------------------------------------------------");
-	}
-	
-	static int prompt(Scanner scanner, String mensagem) {
-		System.out.print(mensagem);
-		return scanner.nextInt();
-	}
-	
-	static void encerrarProgramaPorCausaDaPosicaoInvalida() {
-		System.err.println("Posição inválida!");
-		System.exit(1);
+	static boolean posicaoInformadaEhValida(Integer posicao, String[] array) {
+		return posicao >= 0 && posicao < array.length;
 	}
 }

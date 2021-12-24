@@ -5,7 +5,7 @@ public class Exercicio01 {
 		Produto produto = new Produto();
 		produto.nome = "Smartphone";
 		produto.precoUnitario = 1000.0;
-		produto.quantidade = 20;
+		produto.quantidade = 5;
 		
 		boolean precisaRepor = produtoPrecisaSerRepostoNoEstoque(produto);
 		if (precisaRepor) {
@@ -17,6 +17,6 @@ public class Exercicio01 {
 	}
 	
 	static boolean produtoPrecisaSerRepostoNoEstoque(Produto produto) {
-		return produto.quantidade <= 10;
+		return produto.quantidade <= Produto.QUANTIDADE_MINIMA_ESTOQUE;
 	}
 }

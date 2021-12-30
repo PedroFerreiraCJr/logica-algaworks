@@ -1,4 +1,4 @@
-package br.com.algaworks.curso_logica._09_orientacao_a_objetos;
+package br.com.algaworks.curso_logica._09_orientacao_a_objetos.primeira_classe;
 
 public class PrimeiraClasse {
 

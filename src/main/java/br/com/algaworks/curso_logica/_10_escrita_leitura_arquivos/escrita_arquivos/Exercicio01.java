@@ -1,4 +1,4 @@
-package br.com.algaworks.curso_logica._10_escrita_arquivos;
+package br.com.algaworks.curso_logica._10_escrita_leitura_arquivos.escrita_arquivos;
 
 import java.io.IOException;
 import java.nio.file.Files;

@@ -12,6 +12,14 @@
 		<target.version>1.8</target.version>
 	</properties>
 
+	<dependencies>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-email</artifactId>
+			<version>1.5</version>
+		</dependency>
+	</dependencies>
+
 	<build>
 		<finalName>curso-logica</finalName>
 		<plugins>

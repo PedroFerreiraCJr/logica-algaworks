@@ -27,4 +27,27 @@ public class ListaAlunos {
 		lista[tamanhoLista] = aluno;
 		tamanhoLista++;
 	}
+
+	void remover(Aluno aluno) {
+		for (int i = 0; i < tamanhoLista; i++) {
+			Aluno atual = lista[i];
+			if (atual != null && atual.equals(aluno)) {
+				remover(i);
+				break;
+			}
+			else if (atual == null && aluno == null) {
+				remover(i);
+				break;
+			}
+		}
+	}
+
+	void remover(int indice) {
+		int indiceInicial = indice + 1;
+		for (int i = indiceInicial; i < tamanhoLista; i++) {
+			lista[i - 1] = lista[i];
+		}
+		tamanhoLista--;
+		lista[tamanhoLista] = null;
+	}
 }

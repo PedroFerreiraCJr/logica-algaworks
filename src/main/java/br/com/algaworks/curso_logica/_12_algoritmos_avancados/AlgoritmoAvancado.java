@@ -6,7 +6,7 @@ public class AlgoritmoAvancado {
 		ListaAlunos alunos = new ListaAlunos();
 
 		Aluno aluno1 = new Aluno();
-		aluno1.nome = "João";
+		aluno1.nome = "Thiago";
 		alunos.adicionar(aluno1);
 
 		Aluno aluno2 = new Aluno();
@@ -22,19 +22,19 @@ public class AlgoritmoAvancado {
 		alunos.adicionar(aluno4);
 
 		Aluno aluno5 = new Aluno();
-		aluno5.nome = "Thiago";
+		aluno5.nome = "João";
 		alunos.adicionar(aluno5);
-
-		for (int i = 0; i < alunos.tamanho(); i++) {
-			Aluno a = alunos.obter(i);
-			if (a != null) {
-				System.out.printf("Aluno: %s.%n", a.nome);
-			}
-		}
-		System.out.println("--------------------------------");
 		
+		iterar(alunos);
+		alunos.ordenar();
+		
+		iterar(alunos);
 		alunos.remover(aluno3);
 		
+		iterar(alunos);
+	}
+	
+	static void iterar(ListaAlunos alunos) {
 		for (int i = 0; i < alunos.tamanho(); i++) {
 			Aluno a = alunos.obter(i);
 			if (a != null) {

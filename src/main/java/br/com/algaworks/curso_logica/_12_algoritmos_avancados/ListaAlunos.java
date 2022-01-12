@@ -68,8 +68,30 @@ public class ListaAlunos {
 					break;
 				}
 			}
-			
+
 			lista[indicePosicaoBase] = alunoPosicaoBase;
+		}
+	}
+
+	void ordenar2() {
+		// A, B, C
+		for (int i = 0; i < tamanhoLista - 1; i++) {
+			for (int j = i + 1; j < tamanhoLista; j++) {
+				Aluno ante = lista[i];
+				Aluno prox = lista[j];
+				if (ante != null && prox != null) {
+					if (ante.nome.compareTo(prox.nome) > 0) {
+						lista[j] = ante;
+						lista[i] = prox;
+					}
+					continue;
+				}
+
+				if (ante == null && prox != null) {
+					lista[j] = ante;
+					lista[i] = prox;
+				}
+			}
 		}
 	}
 }
